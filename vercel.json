@@ -1,7 +1,6 @@
 {
   "crons": [
     { "path": "/api/cron/cse-telegram", "schedule": "30 0 * * *" },
-    { "path": "/api/cron/cse-telegram", "schedule": "30 1 * * *" },
     { "path": "/api/cron/cse-telegram", "schedule": "30 2 * * *" }
   ]
 }
