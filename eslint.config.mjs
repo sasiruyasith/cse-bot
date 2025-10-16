@@ -1,16 +1,15 @@
-// eslint.config.mjs  — Next.js 15 flat config
-import next from 'eslint-config-next';
+// eslint.config.mjs
+import next from "eslint-config-next";
 
+/** @type {import("eslint").Linter.FlatConfig[]} */
 export default [
-  // If you also want to ignore all API routes, uncomment the next line:
-  // { ignores: ['app/api/**'] },
-
+  {
+    ignores: ["node_modules/**", ".next/**"], // optional
+  },
   ...next,
-
-  // Turn off the noisy rule causing your Vercel build to fail
   {
     rules: {
-      '@typescript-eslint/no-explicit-any': 'off',
+      "@typescript-eslint/no-explicit-any": "off", // turn off the rule that breaks your build
     },
   },
 ];
